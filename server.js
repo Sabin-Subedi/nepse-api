@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./util/db");
 const NEPSE = require("./model/nepseModel");
+const cors = require("cors");
 
 dotenv.config();
 
