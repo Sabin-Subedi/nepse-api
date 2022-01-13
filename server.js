@@ -17,6 +17,12 @@ app.use(cors());
 
 const io = new Server(server);
 
+app.get("/", (req, res) => {
+  res.send(200).json({
+    message: "Welcome to the Nepse API",
+  });
+});
+
 app.get("/api/nepse-live", async (req, res) => {
   try {
     const liveData = await NEPSE.find();
