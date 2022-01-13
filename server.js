@@ -13,6 +13,7 @@ const app = express();
 
 const server = http.createServer(app);
 
+server.use(cors());
 app.use(cors());
 
 const io = new Server(server);
