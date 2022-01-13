@@ -1,6 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const https = require("https");
+const http = require("http");
 const connectDB = require("./util/db");
 const NEPSE = require("./model/nepseModel");
 const cors = require("cors");
@@ -11,7 +11,7 @@ dotenv.config();
 connectDB();
 const app = express();
 
-const server = https.createServer(app);
+const server = http.createServer(app);
 
 app.use(cors());
 
